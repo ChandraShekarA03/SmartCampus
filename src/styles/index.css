@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #07090e;
+    --bg-surface: rgba(15, 23, 42, 0.75);
+    --bg-surface-elevated: rgba(30, 41, 59, 0.85);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-prominent: rgba(255, 255, 255, 0.16);
+    --accent-emerald: #10b981;
+    --accent-indigo: #6366f1;
+    --accent-cyan: #06b6d4;
+    --accent-amber: #f59e0b;
+    --accent-rose: #f43f5e;
+    
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: #f8fafc;
+    overflow: hidden;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Glassmorphic Surfaces */
+.glass-island {
+  background: rgba(13, 18, 30, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+}
+
+.glass-island-subtle {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-card {
+  background: rgba(26, 35, 54, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Animated Flowing Path */
+@keyframes routePulse {
+  0% {
+    stroke-dashoffset: 60;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.route-flow-line {
+  stroke-dasharray: 10 14;
+  animation: routePulse 1.4s linear infinite;
+}
+
+@keyframes laserSweep {
+  0% {
+    stroke-dashoffset: 40;
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0.4;
+  }
+}
+
+.laser-pulse {
+  stroke-dasharray: 8 6;
+  animation: laserSweep 0.8s ease-in-out infinite;
+}
+
+@keyframes beaconHalo {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+.beacon-ring {
+  transform-origin: center;
+  animation: beaconHalo 2s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
+
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.float-hover {
+  animation: subtleFloat 4s ease-in-out infinite;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Interactive Input Controls */
+.app-select {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.app-select:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+/* Category Color Tokens */
+.cat-academic { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+.cat-facility { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+.cat-food { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+.cat-admin { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
+.cat-sports { background: rgba(244, 63, 94, 0.15); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.3); }
+.cat-residential { background: rgba(14, 165, 233, 0.15); color: #38bdf8; border: 1px solid rgba(14, 165, 233, 0.3); }
+
+/* Print Mode for Report */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    overflow: visible !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .printable-doc {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+}

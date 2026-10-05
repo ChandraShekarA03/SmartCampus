@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SmartCampus — DAA Academic Project Report</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+    
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+      background: #f8fafc;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 50px 60px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+    }
+    .header-bar {
+      text-align: center;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 30px;
+      margin-bottom: 40px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 8px 0;
+    }
+    h2 {
+      font-size: 18px;
+      color: #0f172a;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 8px;
+      margin-top: 36px;
+    }
+    h3 {
+      font-size: 15px;
+      color: #334155;
+      margin-top: 20px;
+    }
+    p, li {
+      font-size: 14px;
+      color: #334155;
+    }
+    pre, code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+    }
+    pre {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 16px 20px;
+      border-radius: 12px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 13px;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 10px 14px;
+      text-align: left;
+    }
+    th {
+      background: #f1f5f9;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .pass-badge {
+      background: #dcfce7;
+      color: #15803d;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 11px;
+    }
+    .btn-print {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .btn-print:hover {
+      background: #1e293b;
+    }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .container { border: none; box-shadow: none; padding: 0; max-width: 100%; }
+      .btn-print { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="btn-print" onclick="window.print()">🖨️ Print / Save as PDF</button>
+
+  <div class="container">
+    <div class="header-bar">
+      <span class="badge">Design and Analysis of Algorithms • CIA 3 Report</span>
+      <h1>SmartCampus — Intelligent Campus Route Finder</h1>
+      <p style="margin: 0; color: #64748b; font-weight: 500;">
+        Single-Source Shortest Path Optimization using Dijkstra's Algorithm and Min-Binary Heap
+      </p>
+      <p style="margin: 8px 0 0 0; font-size: 12px; color: #94a3b8; font-family: 'JetBrains Mono', monospace;">
+        CHRIST (Deemed to be University) • Department of Computer Science & Engineering
+      </p>
+    </div>
+
+    <h2>1. Introduction</h2>
+    <p>
+      Navigating large modern educational campuses with numerous interconnected academic blocks, research labs, libraries, food courts, and sports facilities presents a daily spatial optimization challenge. <strong>SmartCampus</strong> models the campus physical layout as a weighted graph <code>G = (V, E)</code> and executes Dijkstra's Algorithm with a Min-Binary Heap to compute shortest walkable paths in <code>O((V + E) log V)</code> time.
+    </p>
+
+    <h2>2. Problem Statement</h2>
+    <p>
+      Given campus graph <code>G = (V, E)</code> with <code>|V|</code> vertices and <code>|E|</code> walkways with non-negative distances <code>w(u, v) ≥ 0</code>, find an ordered path <code>P = &lt;s = v₀, v₁, v₂, ..., vₖ = t&gt;</code> that minimizes total physical distance <code>Σ w(vᵢ₋₁, vᵢ)</code> between starting vertex <code>s</code> and destination <code>t</code>.
+    </p>
+
+    <h2>3. Objectives</h2>
+    <ul>
+      <li>Represent campus infrastructure as an Adjacency List graph.</li>
+      <li>Implement Dijkstra's Algorithm using a custom Binary Min-Heap Priority Queue.</li>
+      <li>Provide an interactive step-by-step visual simulator for academic evaluation.</li>
+      <li>Benchmark algorithmic performance against BFS, A* Search, and Bellman-Ford.</li>
+      <li>Deliver an interactive Graph Editor allowing arbitrary graph modifications.</li>
+    </ul>
+
+    <h2>4. Graph Representation G = (V, E)</h2>
+    <p><strong>Vertices (V):</strong> Main Block, Library, CS & AI Block, Central Cafeteria, Auditorium, Science Labs, Sports Arena, Hostel Residence, Examination Block, Health Center, Research Hub, Amphitheatre.</p>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Edge ID</th>
+          <th>Source (u)</th>
+          <th>Target (v)</th>
+          <th>Distance (w)</th>
+          <th>Pathway Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>e-main-lib</td><td>Main Block</td><td>Knowledge Library</td><td><strong>120 m</strong></td><td>Covered Avenue</td></tr>
+        <tr><td>e-lib-cs</td><td>Knowledge Library</td><td>CS & AI Block</td><td><strong>180 m</strong></td><td>Academic Corridor</td></tr>
+        <tr><td>e-main-cs</td><td>Main Block</td><td>CS & AI Block</td><td><strong>340 m</strong></td><td>Central Spine</td></tr>
+        <tr><td>e-main-caf</td><td>Main Block</td><td>Central Cafeteria</td><td><strong>200 m</strong></td><td>Canopy Walkway</td></tr>
+        <tr><td>e-caf-cs</td><td>Central Cafeteria</td><td>CS & AI Block</td><td><strong>100 m</strong></td><td>Plaza Connector</td></tr>
+      </tbody>
+    </table>
+
+    <h2>5. Formal Pseudocode</h2>
+    <pre><code>ALGORITHM Dijkstra(Graph G, Source s, Destination t):
+1.  FOR each vertex v in G.V:
+2.      dist[v] ← INFINITY
+3.      prev[v] ← NULL
+4.  dist[s] ← 0
+5.  
+6.  PQ ← MinPriorityQueue()
+7.  PQ.insert(s, 0)
+8.  
+9.  WHILE PQ is not empty:
+10.     u ← PQ.extractMin()
+11.     IF u == t: BREAK  // Early stopping
+12.     
+13.     FOR each neighbor v in G.Adj[u]:
+14.         alt ← dist[u] + weight(u, v)
+15.         IF alt < dist[v]:  // Edge Relaxation
+16.             dist[v] ← alt
+17.             prev[v] ← u
+18.             PQ.insert(v, alt)
+19. 
+20. RETURN ReconstructPath(prev, s, t), dist[t]</code></pre>
+
+    <h2>6. Asymptotic Complexity Analysis</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Operation</th>
+          <th>Adjacency Matrix</th>
+          <th>Binary Min-Heap (SmartCampus)</th>
+          <th>Fibonacci Heap</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Time Complexity</strong></td><td>O(V²)</td><td><strong>O((V + E) log V)</strong></td><td>O(E + V log V)</td></tr>
+        <tr><td><strong>Space Complexity</strong></td><td>O(V²)</td><td><strong>O(V + E)</strong></td><td>O(V + E)</td></tr>
+      </tbody>
+    </table>
+
+    <h2>7. Test Suite Assertions</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Test ID</th>
+          <th>Scenario</th>
+          <th>Source ➜ Target</th>
+          <th>Expected</th>
+          <th>Actual</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>T1</strong></td><td>Direct Edge</td><td>Main Block ➜ Library</td><td>120m</td><td>120m</td><td><span class="pass-badge">PASS</span></td></tr>
+        <tr><td><strong>T2</strong></td><td>Multi-Hop Corridor</td><td>Library ➜ CS Block</td><td>180m</td><td>180m</td><td><span class="pass-badge">PASS</span></td></tr>
+        <tr><td><strong>T3</strong></td><td>West Quad Edge</td><td>Main Block ➜ Auditorium</td><td>160m</td><td>160m</td><td><span class="pass-badge">PASS</span></td></tr>
+        <tr><td><strong>T4</strong></td><td>Self-Loop (Same node)</td><td>Main Block ➜ Main Block</td><td>0m</td><td>0m</td><td><span class="pass-badge">PASS</span></td></tr>
+        <tr><td><strong>T5</strong></td><td>Optimal Path Selection</td><td>Main Block ➜ CS Block</td><td>300m</td><td>300m</td><td><span class="pass-badge">PASS</span></td></tr>
+        <tr><td><strong>T6</strong></td><td>Disconnected Island</td><td>Main Block ➜ Isolated Annex</td><td>UNREACHABLE</td><td>UNREACHABLE</td><td><span class="pass-badge">PASS</span></td></tr>
+      </tbody>
+    </table>
+
+    <h2>8. Algorithmic Comparison: Dijkstra vs BFS</h2>
+    <p>
+      In the canonical scenario (<em>Main Block ➜ CS Block</em>), BFS selects the direct 1-hop edge of <strong>340m</strong> because it only minimizes edge count. In contrast, <strong>Dijkstra's Algorithm</strong> explores the 2-hop route via Library (120m + 180m = <strong>300m</strong>), discovering the true shortest physical path and saving 40 meters.
+    </p>
+
+    <h2>9. Conclusion</h2>
+    <p>
+      SmartCampus demonstrates the practical power of graph algorithms and greedy optimization. The binary min-heap implementation delivers provably optimal physical routing with <code>O((V + E) log V)</code> performance, making complex graph theory transparent and interactive.
+    </p>
+  </div>
+
+</body>
+</html>
