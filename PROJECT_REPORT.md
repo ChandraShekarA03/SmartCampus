@@ -5,8 +5,13 @@
 
 # SmartCampus: Intelligent Campus Route Finder
 **Topic:** Implementation, Analysis, and Visualization of Dijkstra's Shortest Path Algorithm using Binary Min-Heaps for Campus Navigation  
+**Student Name:** Chandra Shekar A  
+**Register Number:** 2441516  
+**Program & Class:** 6 BCA A  
+**Semester:** Semester VI (6)  
+**Course Code:** BCA202-6  
+**Department:** Department of Computer Science, School of Sciences  
 **Institution:** CHRIST (Deemed to be University)  
-**Department:** Department of Computer Science and Engineering  
 **Academic Year:** 2026–2027  
 
 ---
@@ -377,6 +382,8 @@ In this project, we successfully applied graph theory and Dijkstra's shortest pa
 
 ---
 
-**Prepared by:** DAA Student Group  
-**Department:** Department of Computer Science and Engineering  
-**CHRIST (Deemed to be University)**
+**Prepared by:** Chandra Shekar A (Reg No: 2441516)  
+**Class & Semester:** 6 BCA A • Semester VI (6)  
+**Course Code:** BCA202-6  
+**Department:** Department of Computer Science, School of Sciences  
+**Institution:** CHRIST (Deemed to be University)
