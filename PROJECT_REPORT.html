@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>SmartCampus — DAA Comprehensive Academic Project Report</title>
+  <title>SmartCampus — DAA Course Project Report</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
     
     @page {
       size: A4 portrait;
@@ -47,7 +47,6 @@
       border: 1px solid #e2e8f0;
     }
 
-    /* Cover Page Styling */
     .cover-page {
       text-align: center;
       padding: 40px 20px 60px 20px;
@@ -140,7 +139,6 @@
       letter-spacing: 0.5px;
     }
 
-    /* Headings & Hierarchy */
     h2 {
       font-size: 20px;
       font-weight: 800;
@@ -164,14 +162,6 @@
       page-break-after: avoid;
     }
 
-    h4 {
-      font-size: 13.5px;
-      font-weight: 700;
-      color: #334155;
-      margin-top: 18px;
-      margin-bottom: 8px;
-    }
-
     p {
       margin: 0 0 12px 0;
       text-align: justify;
@@ -188,7 +178,6 @@
       margin-bottom: 6px;
     }
 
-    /* Code & Pseudocode */
     pre, code {
       font-family: 'JetBrains Mono', monospace;
     }
@@ -215,7 +204,6 @@
       page-break-inside: avoid;
     }
 
-    /* Tables */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -251,7 +239,6 @@
       border: 1px solid #86efac;
     }
 
-    /* Diagrams & Visual Figures */
     .figure-container {
       margin: 24px 0;
       padding: 20px;
@@ -355,9 +342,7 @@
 
   <div class="report-wrapper">
 
-    <!-- ========================================== -->
-    <!-- COVER PAGE                                 -->
-    <!-- ========================================== -->
+    <!-- COVER PAGE -->
     <div class="cover-page">
       <div class="inst-logo">⚡</div>
       <div class="inst-title">CHRIST (Deemed to be University)</div>
@@ -366,7 +351,7 @@
       <div class="course-badge">Course Project Report — CIA 3 Evaluation</div>
       <h1 class="main-title">SmartCampus: Intelligent Campus Route Finder</h1>
       <p class="sub-title">
-        A Graph-Theoretic Navigation System implementing Dijkstra’s Single-Source Shortest Path Algorithm with Binary Min-Heap Priority Queues, Step-by-Step Visualization, and Asymptotic Complexity Benchmarking.
+        Implementation, Analysis, and Visualization of Dijkstra’s Shortest Path Algorithm using Binary Min-Heaps for Real-World Campus Navigation.
       </p>
 
       <div class="meta-grid">
@@ -380,18 +365,16 @@
         </div>
         <div class="meta-item">
           <strong>Core Data Structure:</strong>
-          Weighted Graph \( G=(V,E) \) + Binary Min-Heap
+          Weighted Graph G = (V, E) + Binary Min-Heap
         </div>
         <div class="meta-item">
           <strong>Algorithm & Time Complexity:</strong>
-          Dijkstra’s Algorithm • \( \mathcal{O}((V + E) \log V) \)
+          Dijkstra’s Algorithm • O((V + E) log V)
         </div>
       </div>
     </div>
 
-    <!-- ========================================== -->
-    <!-- TABLE OF CONTENTS                          -->
-    <!-- ========================================== -->
+    <!-- TABLE OF CONTENTS -->
     <h2>📑 Table of Contents</h2>
     <table style="font-size: 13px;">
       <thead>
@@ -407,7 +390,7 @@
         <tr><td><strong>3.0</strong></td><td>Problem Statement & Mathematical Formulation</td><td>Formal Minimization Problem</td></tr>
         <tr><td><strong>4.0</strong></td><td>Design & Analysis of Algorithms Objectives</td><td>Academic & Practical Goals</td></tr>
         <tr><td><strong>5.0</strong></td><td>Real-World Applications & Domain Context</td><td>OSPF, GPS, Logistics</td></tr>
-        <tr><td><strong>6.0</strong></td><td>Graph Theory Modeling & Spatial Abstraction</td><td>Graph Definition \( G=(V,E) \)</td></tr>
+        <tr><td><strong>6.0</strong></td><td>Graph Theory Modeling & Spatial Abstraction</td><td>Graph Definition G = (V,E)</td></tr>
         <tr><td><strong>7.0</strong></td><td>Dijkstra's Algorithm & Mathematical Foundations</td><td>Greedy Choice & Proof of Correctness</td></tr>
         <tr><td><strong>8.0</strong></td><td>Priority Queue Data Structure Architecture</td><td>Binary Min-Heap vs Array vs Fibonacci</td></tr>
         <tr><td><strong>9.0</strong></td><td>Formal Algorithm Specification & Pseudocode</td><td>Cormen / CLRS Compliant Pseudocode</td></tr>
@@ -417,41 +400,36 @@
         <tr><td><strong>13.0</strong></td><td>Test Cases & Assertions Matrix</td><td>T1 to T7 Test Suite Coverage</td></tr>
         <tr><td><strong>14.0</strong></td><td>Asymptotic Complexity Analysis</td><td>Time & Space Complexity Proofs</td></tr>
         <tr><td><strong>15.0</strong></td><td>Comparative Algorithmic Benchmarks</td><td>Dijkstra vs BFS vs A* vs Bellman-Ford</td></tr>
-        <tr><td><strong>16.0</strong></td><td>Limitations, Future Enhancements & Conclusion</td><td>Academic Summary & Roadmap</td></tr>
+        <tr><td><strong>16.0</strong></td><td>Limitations, Future Scope & Academic Conclusion</td><td>Academic Summary & Roadmap</td></tr>
       </tbody>
     </table>
 
     <div class="page-break"></div>
 
-    <!-- ========================================== -->
-    <!-- SECTION 1: ABSTRACT                        -->
-    <!-- ========================================== -->
+    <!-- SECTION 1 -->
     <h2>1.0 Executive Summary & Abstract</h2>
     <p>
-      In modern higher education institutions, expanding physical infrastructure spanning hundreds of thousands of square meters creates complex spatial transit challenges for students, faculty, and campus visitors. Traditional map applications frequently fail to provide localized, pedestrian-specific pathway routing tailored to campus layouts.
+      Navigating a large university campus can be confusing for new students, faculty members, and guests. Standard road mapping tools work well for cars on streets, but they do not map out internal campus pathways, covered walkways, or building connectors.
     </p>
     <p>
-      This paper presents the design, theoretical analysis, and practical implementation of <strong>SmartCampus</strong>, a web-based campus route navigation system built upon formal graph-theoretic foundations. The campus geography is abstracted as a weighted directed/undirected graph \( G = (V, E) \), where vertices represent prominent buildings and facilities, and edges denote walkable avenues, covered corridors, and ramps with non-negative physical distances in meters.
+      In this project, we built <strong>SmartCampus</strong>, a web-based navigation tool designed to calculate the shortest walking route between any two buildings on campus. We modeled the campus as a weighted graph where buildings are vertices and walkable pathways are edges with real distances measured in meters.
     </p>
     <p>
-      At the algorithmic core, Dijkstra’s Single-Source Shortest Path (SSSP) algorithm is implemented using a custom <strong>Binary Min-Heap Priority Queue</strong> to achieve an optimal asymptotic time complexity of \( \mathcal{O}((V + E) \log V) \). The system includes an interactive visual execution simulator that reveals discrete relaxation steps and queue state mutations in real time, making the application an effective pedagogical tool for Design and Analysis of Algorithms (DAA). Comprehensive empirical benchmarks across 7 test cases validate the algorithm's correctness, deterministic optimality, and superiority over unweighted alternatives such as Breadth-First Search (BFS).
+      We implemented Dijkstra's Single-Source Shortest Path algorithm backed by a binary min-heap priority queue. This gives our implementation an optimal time complexity of O((V + E) log V). To help visualize how the algorithm works during our viva and lab evaluation, we built an interactive step-by-step visualizer that shows edge relaxation, queue mutations, and live distance table updates. We also tested the system against 7 distinct test scenarios and benchmarked it against BFS, A*, and Bellman-Ford.
     </p>
 
-    <!-- ========================================== -->
-    <!-- SECTION 2: INTRODUCTION                    -->
-    <!-- ========================================== -->
+    <!-- SECTION 2 -->
     <h2>2.0 Introduction & Background</h2>
     <p>
-      University campuses represent microcosm cities consisting of specialized academic departments, computational laboratories, central libraries, recreation auditoriums, health centers, and dining halls. During passing periods between lecture blocks, students must traverse these networks under strict time constraints. Suboptimal route choices lead to transit delays, localized hallway congestion, and inefficient facility utilization.
+      Our university campus has dozens of interconnected blocks spread across multiple acres. During class changeovers, students have only a five-to-ten-minute window to walk from one department to another. When people take longer routes simply because they do not know the layout, it causes delays and crowded corridors.
     </p>
     <p>
-      While commercial GPS navigation systems excel at vehicular transit, they lack pedestrian-scale pathway resolutions, indoor connecting skybridges, covered monsoon boulevards, and pedestrian walkability factors. Designing a specialized campus route finder therefore serves as a relevant software engineering endeavor and an ideal testbed for graph-theoretic shortest-path optimization.
+      When we looked at existing mapping software, we noticed a clear gap: mainstream apps only cover surrounding public roads. They do not know about the footpath connecting the Central Library to the Computer Science Block, or the covered ramp between the Auditorium and the Health Center. By building our own graph model and running Dijkstra's algorithm, we created a focused navigation engine that gives students exact turn-by-turn routes, total distance in meters, and estimated walking times.
     </p>
 
     <div class="figure-container">
       <svg width="100%" height="220" viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
         <rect width="800" height="220" rx="12" fill="#0b1329"/>
-        <!-- Nodes -->
         <g stroke="#334155" stroke-width="2">
           <line x1="120" y1="110" x2="280" y2="50" stroke="#10b981" stroke-width="3"/>
           <line x1="280" y1="50" x2="480" y2="80" stroke="#10b981" stroke-width="3"/>
@@ -460,14 +438,12 @@
           <line x1="120" y1="110" x2="480" y2="80" stroke="#f43f5e" stroke-width="2" stroke-dasharray="4 4"/>
           <line x1="480" y1="80" x2="680" y2="120" stroke="#475569" stroke-width="2"/>
         </g>
-        <!-- Edge Labels -->
         <rect x="180" y="65" width="46" height="18" rx="4" fill="#064e3b"/><text x="203" y="78" fill="#a7f3d0" font-family="JetBrains Mono" font-size="10" text-anchor="middle">120m</text>
         <rect x="360" y="52" width="46" height="18" rx="4" fill="#064e3b"/><text x="383" y="65" fill="#a7f3d0" font-family="JetBrains Mono" font-size="10" text-anchor="middle">180m</text>
         <rect x="190" y="145" width="46" height="18" rx="4" fill="#1e293b"/><text x="213" y="158" fill="#94a3b8" font-family="JetBrains Mono" font-size="10" text-anchor="middle">200m</text>
         <rect x="380" y="130" width="46" height="18" rx="4" fill="#1e293b"/><text x="403" y="143" fill="#94a3b8" font-family="JetBrains Mono" font-size="10" text-anchor="middle">100m</text>
         <rect x="280" y="102" width="46" height="18" rx="4" fill="#881337"/><text x="303" y="115" fill="#fecdd3" font-family="JetBrains Mono" font-size="10" text-anchor="middle">340m</text>
 
-        <!-- Vertices -->
         <circle cx="120" cy="110" r="22" fill="#10b981" stroke="#34d399" stroke-width="2"/>
         <text x="120" y="114" fill="#ffffff" font-family="Plus Jakarta Sans" font-size="11" font-weight="700" text-anchor="middle">Main</text>
 
@@ -483,165 +459,183 @@
         <circle cx="680" cy="120" r="22" fill="#6366f1" stroke="#818cf8" stroke-width="2"/>
         <text x="680" y="124" fill="#ffffff" font-family="Plus Jakarta Sans" font-size="11" font-weight="700" text-anchor="middle">Sports</text>
       </svg>
-      <div class="figure-caption">Figure 1: Conceptual Campus Graph Network Representation with Multi-Way Intersections</div>
+      <div class="figure-caption">Figure 1: Campus Graph Network Model with Alternative Competing Pathways</div>
     </div>
 
-    <!-- ========================================== -->
-    <!-- SECTION 3: PROBLEM STATEMENT               -->
-    <!-- ========================================== -->
+    <!-- SECTION 3 -->
     <h2>3.0 Problem Statement & Mathematical Formulation</h2>
     <p>
-      Let the university campus be formally modeled as a connected, weighted, undirected graph:
+      We represent the physical campus layout as a connected, weighted graph:
     </p>
     <div class="math-block">
       G = (V, E, w)
     </div>
     <p>Where:</p>
     <ul>
-      <li>\( V = \{v_1, v_2, \dots, v_n\} \) is the finite set of \( n \) campus landmark vertices (buildings, centers).</li>
-      <li>\( E \subseteq V \times V \) is the set of \( m \) navigable path segments connecting adjacent landmarks.</li>
-      <li>\( w: E \to \mathbb{R}^+ \) is a strictly non-negative weight metric mapping each edge \( (u, v) \in E \) to its physical distance in meters (\( w(u, v) \ge 0 \)).</li>
+      <li><strong>V</strong> is the set of all key campus locations (vertices) such as academic blocks, the library, cafeteria, and hostel.</li>
+      <li><strong>E</strong> is the set of physical walkways (edges) connecting adjacent buildings.</li>
+      <li><strong>w(u, v)</strong> is a non-negative number representing the distance in meters between node u and node v. Since walking distances can never be negative, w(u, v) >= 0 for all edges.</li>
     </ul>
 
-    <p><strong>Formal Optimization Objective:</strong></p>
+    <p><strong>Optimization Goal:</strong></p>
     <p>
-      Given a source vertex \( s \in V \) and a destination target vertex \( t \in V \), find an ordered sequence of adjacent vertices \( P = \langle s = v_0, v_1, v_2, \dots, v_k = t \rangle \) such that:
+      Given a start building <code>s</code> and a destination building <code>t</code>, we want to find a sequence of connected nodes <code>P = &lt;s = v0, v1, v2, ..., vk = t&gt;</code> that minimizes the total distance traveled:
     </p>
     <div class="math-block">
-      \text{Minimize } \mathcal{W}(P) = \sum_{i=1}^{k} w(v_{i-1}, v_i) \quad \text{subject to } (v_{i-1}, v_i) \in E \quad \forall i \in \{1, \dots, k\}
+      Minimize Total Distance = Sum of w(v_{i-1}, v_i) for i = 1 to k
     </div>
 
     <div class="page-break"></div>
 
-    <!-- ========================================== -->
-    <!-- SECTION 4: OBJECTIVES                      -->
-    <!-- ========================================== -->
+    <!-- SECTION 4 -->
     <h2>4.0 Design & Analysis of Algorithms Objectives</h2>
     <ol>
-      <li><strong>Graph Data Structure Engineering</strong>: Formulate and store complex spatial networks using an optimized <em>Adjacency List</em> representation yielding optimal \( \mathcal{O}(V + E) \) memory utilization.</li>
-      <li><strong>Greedy Algorithmic Implementation</strong>: Implement Dijkstra’s Algorithm augmented with an efficient <em>Binary Min-Heap</em> priority queue achieving \( \mathcal{O}((V + E) \log V) \) time bounds.</li>
-      <li><strong>Pedagogical Execution Tracer</strong>: Build an interactive visualizer mapping runtime step mutations directly to Cormen (CLRS) pseudocode lines.</li>
-      <li><strong>Comparative Algorithmic Benchmarks</strong>: Provide direct runtime, memory, and path length comparisons across Dijkstra, BFS, A*, and Bellman-Ford.</li>
-      <li><strong>Dynamic Sandbox Graph Editor</strong>: Support dynamic node additions, edge weight modifications, and JSON graph serialization for testing.</li>
+      <li><strong>Graph Modeling</strong>: Store the campus graph using an Adjacency List to keep memory usage at O(V + E) instead of wasting space with an O(V^2) matrix.</li>
+      <li><strong>Algorithm Implementation</strong>: Write Dijkstra's algorithm from scratch with a custom binary min-heap priority queue, ensuring an O((V + E) log V) runtime.</li>
+      <li><strong>Visual Execution Tracing</strong>: Build a step-by-step simulator that shows exactly which node is extracted from the queue, which edges are relaxed, and how the distance table updates line by line.</li>
+      <li><strong>Comparative Analysis</strong>: Run empirical benchmarks against BFS, A*, and Bellman-Ford to demonstrate why Dijkstra is the right choice for weighted road networks.</li>
+      <li><strong>Interactive Graph Editor</strong>: Allow demo users and professors to add new locations, draw new pathways, update edge weights, and verify that the algorithm updates dynamically.</li>
     </ol>
 
-    <!-- ========================================== -->
-    <!-- SECTION 5: REAL-WORLD APPLICATIONS         -->
-    <!-- ========================================== -->
+    <!-- SECTION 5 -->
     <h2>5.0 Real-World Applications & Domain Context</h2>
     <p>
-      The algorithmic principles formulated in SmartCampus extend across critical industry systems:
+      The core graph algorithm implemented in this project forms the basis for several industry systems:
     </p>
     <ul>
-      <li><strong>Global Navigation Satellite Systems (GNSS)</strong>: Navigation platforms (Google Maps, Apple Maps) compute shortest driving and transit trajectories using hierarchical contractions of Dijkstra’s algorithm.</li>
-      <li><strong>Autonomous Mobile Robotics (AMR)</strong>: Factory and hospital delivery robots navigate corridors using real-time edge relaxation.</li>
-      <li><strong>Telecommunication Routing Protocols</strong>: The Open Shortest Path First (OSPF) and Intermediate System to Intermediate System (IS-IS) network protocols execute Dijkstra’s algorithm locally on routers to establish minimum-delay IP packet forwarding trees.</li>
+      <li><strong>GPS and Turn-by-Turn Navigation</strong>: Tools like Google Maps and Apple Maps rely on shortest-path algorithms across massive road network graphs.</li>
+      <li><strong>Internet Routing Protocols</strong>: The Open Shortest Path First (OSPF) routing protocol runs Dijkstra's algorithm on network routers to calculate the fastest path for data packets across the internet.</li>
+      <li><strong>Warehouse and Robotics Logistics</strong>: Automated guided vehicles (AGVs) in fulfillment centers use graph search algorithms to navigate aisles without collisions.</li>
     </ul>
 
-    <!-- ========================================== -->
-    <!-- SECTION 6: GRAPH THEORY MODELING           -->
-    <!-- ========================================== -->
+    <!-- SECTION 6 -->
     <h2>6.0 Graph Theory Modeling & Spatial Abstraction</h2>
     <p>
-      The CHRIST Central Campus network modeled in SmartCampus comprises 12 primary landmark nodes and 20 bidirectional walkable avenues.
+      For our implementation, we mapped 12 major landmark buildings and 20 connecting pathways across the central campus.
     </p>
 
     <table>
       <thead>
         <tr>
           <th>Node ID</th>
-          <th>Building Landmark Name</th>
+          <th>Building Name</th>
           <th>Category</th>
           <th>Floors</th>
-          <th>Primary Facilities & Departments</th>
+          <th>Key Facilities & Departments</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td><code>main-block</code></td><td>Main Block (Central Administration)</td><td>Administrative</td><td>5</td><td>Deanery, Controller of Examinations, Admissions</td></tr>
-        <tr><td><code>library</code></td><td>Knowledge Center & Central Library</td><td>Academic</td><td>4</td><td>Digital Commons, Silent Reading, Research Archives</td></tr>
-        <tr><td><code>cs-block</code></td><td>Computer Science & AI Block</td><td>Academic</td><td>6</td><td>NVIDIA AI Lab, Supercomputing Clusters, IoT Bays</td></tr>
-        <tr><td><code>cafeteria</code></td><td>Gourmet Central Cafeteria</td><td>Food & Dining</td><td>2</td><td>Multi-cuisine Hall, Student Canteens, Bakery</td></tr>
-        <tr><td><code>auditorium</code></td><td>Main Campus Auditorium (KE)</td><td>Facility</td><td>3</td><td>2,500-seat Acoustic Hall, VIP Lounges</td></tr>
-        <tr><td><code>science-lab</code></td><td>Advanced Science & Physics Complex</td><td>Academic</td><td>4</td><td>Nanotechnology Lab, Spectroscopy Suite</td></tr>
-        <tr><td><code>sports-complex</code></td><td>Indoor Sports Arena & Gymnasium</td><td>Sports</td><td>2</td><td>Badminton Courts, Olympic Pool, Cardio Gym</td></tr>
-        <tr><td><code>hostel-block</code></td><td>St. Thomas Student Residence</td><td>Residential</td><td>7</td><td>Dormitories, Study Rooms, Night Canteen</td></tr>
-        <tr><td><code>admin-block</code></td><td>Syndicate & Examination Block</td><td>Administrative</td><td>3</td><td>Central Evaluation Cell, Registrar Office</td></tr>
-        <tr><td><code>health-center</code></td><td>Campus Medical & Wellness Center</td><td>Facility</td><td>2</td><td>24/7 Nursing Staff, Emergency Pharmacy</td></tr>
+        <tr><td><code>main-block</code></td><td>Main Block (Central Admin)</td><td>Administrative</td><td>5</td><td>Deanery, Examination Office, Admissions</td></tr>
+        <tr><td><code>library</code></td><td>Knowledge Center & Library</td><td>Academic</td><td>4</td><td>Digital Commons, Silent Study, Research Archives</td></tr>
+        <tr><td><code>cs-block</code></td><td>Computer Science & AI Block</td><td>Academic</td><td>6</td><td>AI Labs, Computing Clusters, Robotics Bay</td></tr>
+        <tr><td><code>cafeteria</code></td><td>Gourmet Central Cafeteria</td><td>Food</td><td>2</td><td>Student Dining Hall, Juice Counter, Bakery</td></tr>
+        <tr><td><code>auditorium</code></td><td>Main Campus Auditorium (KE)</td><td>Facility</td><td>3</td><td>2,500-seat Acoustic Hall, Cultural Office</td></tr>
+        <tr><td><code>science-lab</code></td><td>Advanced Science Complex</td><td>Academic</td><td>4</td><td>Physics Labs, Chemistry Suite, Clean Room</td></tr>
+        <tr><td><code>sports-complex</code></td><td>Indoor Sports Arena</td><td>Sports</td><td>2</td><td>Badminton Courts, Swimming Pool, Gym</td></tr>
+        <tr><td><code>hostel-block</code></td><td>St. Thomas Residence</td><td>Residential</td><td>7</td><td>Student Dormitories, Study Halls, Canteen</td></tr>
+        <tr><td><code>admin-block</code></td><td>Examination Office Block</td><td>Administrative</td><td>3</td><td>Evaluation Cell, Records Office</td></tr>
+        <tr><td><code>health-center</code></td><td>Medical & Wellness Center</td><td>Facility</td><td>2</td><td>Nursing Staff, Emergency Beds, Pharmacy</td></tr>
       </tbody>
     </table>
 
     <div class="page-break"></div>
 
-    <!-- ========================================== -->
-    <!-- SECTION 7: DIJKSTRA'S ALGORITHM            -->
-    <!-- ========================================== -->
+    <!-- SECTION 7 -->
     <h2>7.0 Dijkstra's Algorithm & Mathematical Foundations</h2>
     <p>
-      Discovered by Dutch computer scientist Edsger W. Dijkstra in 1956, Dijkstra’s algorithm solves the single-source shortest path problem on weighted graphs with non-negative edge weights.
+      Dijkstra’s algorithm was published by Edsger W. Dijkstra in 1959. It is a greedy algorithm that solves the single-source shortest path problem for graphs where all edge weights are non-negative.
     </p>
 
-    <h3>7.1 Greedy Choice Property & Optimal Substructure</h3>
+    <h3>7.1 Greedy Choice and Optimal Substructure</h3>
     <p>
-      Dijkstra’s algorithm belongs to the class of <strong>Greedy Algorithms</strong>. It maintains two distinct sets of vertices:
+      The algorithm maintains two sets of vertices during execution:
     </p>
     <ul>
-      <li>\( S \): The set of vertices whose final shortest-path weights from the source have already been determined.</li>
-      <li>\( Q = V \setminus S \): The priority queue of unsettled vertices with tentative upper-bound distances.</li>
+      <li><strong>Settled Set S</strong>: Vertices whose shortest distance from the source has already been finalized.</li>
+      <li><strong>Unsettled Priority Queue Q</strong>: Vertices whose tentative shortest distances are still being evaluated.</li>
     </ul>
 
     <div class="callout">
-      <strong>Theorem (Optimal Substructure of Shortest Paths):</strong>
-      Let \( P = \langle v_1, v_2, \dots, v_k \rangle \) be a shortest path from \( v_1 \) to \( v_k \). For any intermediate indices \( i, j \) such that \( 1 \le i \le j \le k \), the subpath \( P_{ij} = \langle v_i, v_{i+1}, \dots, v_j \rangle \) is a shortest path from \( v_i \) to \( v_j \).
+      <strong>Optimal Substructure Property:</strong>
+      If a shortest path from vertex A to vertex C passes through intermediate vertex B, then the subpath from A to B is guaranteed to be the shortest path between A and B.
     </div>
 
-    <h3>7.2 Loop Invariant & Proof of Correctness</h3>
+    <h3>7.2 Proof of Correctness by Contradiction</h3>
     <p>
-      <strong>Invariant:</strong> At the beginning of each iteration of the while loop, for each vertex \( u \in S \), the value \( \text{dist}[u] \) equals the true shortest-path distance \( \delta(s, u) \).
+      We want to prove that when a node <code>u</code> is extracted from the priority queue and added to <code>S</code>, its distance <code>dist[u]</code> is the true shortest distance from the source <code>s</code>.
     </p>
     <p>
-      <strong>Initialization:</strong> Initially \( S = \emptyset \), so the invariant holds vacuously. When the source \( s \) is initialized, \( \text{dist}[s] = 0 = \delta(s, s) \).
+      Suppose for the sake of contradiction that <code>dist[u]</code> is not the shortest distance, meaning there exists a shorter path <code>P</code> from <code>s</code> to <code>u</code>. Since <code>s</code> is in <code>S</code> and <code>u</code> is not in <code>S</code>, the path <code>P</code> must leave <code>S</code> at some point. Let <code>(x, y)</code> be the first edge along <code>P</code> where <code>x</code> is inside <code>S</code> and <code>y</code> is outside <code>S</code>.
     </p>
     <p>
-      <strong>Maintenance:</strong> Let \( u \) be the next vertex extracted from \( Q \) with minimal tentative distance. By contradiction, suppose \( \text{dist}[u] > \delta(s, u) \). There must exist an actual shortest path \( P \) from \( s \) to \( u \). Since \( s \in S \) and \( u \notin S \), the path \( P \) must cross the boundary from \( S \) to \( V \setminus S \). Let \( (x, y) \) be the first edge on \( P \) such that \( x \in S \) and \( y \in V \setminus S \).
-    </p>
-    <p>
-      Because edge weights are non-negative (\( w \ge 0 \)), we have:
+      Because all edge weights are non-negative (<code>w >= 0</code>), the distance to <code>y</code> cannot exceed the total distance along path <code>P</code> to <code>u</code>. Furthermore, because <code>u</code> was chosen over <code>y</code> from the priority queue, <code>dist[u] &lt;= dist[y]</code>. Therefore:
     </p>
     <div class="math-block">
-      \text{dist}[u] \le \text{dist}[y] = \delta(s, y) \le \delta(s, u)
+      dist[u] &lt;= dist[y] &lt;= Total Length of Path P &lt; dist[u]
     </div>
     <p>
-      This contradicts the assumption that \( \text{dist}[u] > \delta(s, u) \). Hence, \( \text{dist}[u] = \delta(s, u) \) holds when \( u \) is added to \( S \).
+      This leads to a direct contradiction (<code>dist[u] &lt; dist[u]</code>). Thus, our initial assumption was false, and <code>dist[u]</code> is indeed the exact shortest distance when <code>u</code> is extracted.
     </p>
 
-    <!-- ========================================== -->
-    <!-- SECTION 8: PRIORITY QUEUE ARCHITECTURE     -->
-    <!-- ========================================== -->
+    <!-- SECTION 8 -->
     <h2>8.0 Priority Queue Data Structure Architecture</h2>
     <p>
-      The choice of priority queue implementation directly governs the asymptotic runtime of Dijkstra’s algorithm:
+      How we store and manage the priority queue makes a massive difference in practical performance. We evaluated three common options:
     </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Priority Queue Implementation</th>
+          <th>Extract-Min Time</th>
+          <th>Decrease-Key / Insert Time</th>
+          <th>Overall Dijkstra Time Complexity</th>
+          <th>Practical Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Unordered Array</strong></td>
+          <td>O(V)</td>
+          <td>O(1)</td>
+          <td>O(V^2)</td>
+          <td>Slow on sparse graphs with many vertices.</td>
+        </tr>
+        <tr>
+          <td><strong>Binary Min-Heap (Our Choice)</strong></td>
+          <td><strong>O(log V)</strong></td>
+          <td><strong>O(log V)</strong></td>
+          <td><strong>O((V + E) log V)</strong></td>
+          <td>Fast, memory-efficient, and easy to implement in standard arrays.</td>
+        </tr>
+        <tr>
+          <td><strong>Fibonacci Heap</strong></td>
+          <td>O(log V)</td>
+          <td>O(1) amortized</td>
+          <td>O(E + V log V)</td>
+          <td>Theoretically faster, but has high constant-factor overhead in practice.</td>
+        </tr>
+      </tbody>
+    </table>
 
     <div class="figure-container">
       <svg width="100%" height="200" viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
         <rect width="700" height="200" rx="10" fill="#0b1329"/>
         
-        <!-- Heap Tree Visualization -->
         <circle cx="200" cy="40" r="18" fill="#10b981"/><text x="200" y="44" fill="#ffffff" font-family="JetBrains Mono" font-size="11" font-weight="700" text-anchor="middle">s:0</text>
         
         <line x1="188" y1="54" x2="132" y2="96" stroke="#475569" stroke-width="2"/>
         <line x1="212" y1="54" x2="268" y2="96" stroke="#475569" stroke-width="2"/>
 
-        <circle cx="120" cy="110" r="18" fill="#0284c7"/><text x="120" y="114" fill="#ffffff" font-family="JetBrains Mono" font-size="11" font-weight="700" text-anchor="middle">v₁:120</text>
-        <circle cx="280" cy="110" r="18" fill="#d97706"/><text x="280" y="114" fill="#ffffff" font-family="JetBrains Mono" font-size="11" font-weight="700" text-anchor="middle">v₂:200</text>
+        <circle cx="120" cy="110" r="18" fill="#0284c7"/><text x="120" y="114" fill="#ffffff" font-family="JetBrains Mono" font-size="11" font-weight="700" text-anchor="middle">v1:120</text>
+        <circle cx="280" cy="110" r="18" fill="#d97706"/><text x="280" y="114" fill="#ffffff" font-family="JetBrains Mono" font-size="11" font-weight="700" text-anchor="middle">v2:200</text>
 
         <line x1="110" y1="124" x2="70" y2="156" stroke="#475569" stroke-width="2"/>
         <line x1="130" y1="124" x2="170" y2="156" stroke="#475569" stroke-width="2"/>
 
-        <circle cx="60" cy="170" r="16" fill="#475569"/><text x="60" y="174" fill="#ffffff" font-family="JetBrains Mono" font-size="10" text-anchor="middle">v₃:300</text>
-        <circle cx="180" cy="170" r="16" fill="#475569"/><text x="180" y="174" fill="#ffffff" font-family="JetBrains Mono" font-size="10" text-anchor="middle">v₄:340</text>
+        <circle cx="60" cy="170" r="16" fill="#475569"/><text x="60" y="174" fill="#ffffff" font-family="JetBrains Mono" font-size="10" text-anchor="middle">v3:300</text>
+        <circle cx="180" cy="170" r="16" fill="#475569"/><text x="180" y="174" fill="#ffffff" font-family="JetBrains Mono" font-size="10" text-anchor="middle">v4:340</text>
 
-        <!-- Array Mapping -->
         <g transform="translate(380, 50)">
           <text x="0" y="0" fill="#94a3b8" font-family="Plus Jakarta Sans" font-size="12" font-weight="700">Contiguous Array Storage Mapping:</text>
           
@@ -653,157 +647,142 @@
 
           <text x="0" y="75" fill="#a7f3d0" font-family="JetBrains Mono" font-size="11">• Left Child: 2i + 1</text>
           <text x="0" y="92" fill="#a7f3d0" font-family="JetBrains Mono" font-size="11">• Right Child: 2i + 2</text>
-          <text x="0" y="109" fill="#a7f3d0" font-family="JetBrains Mono" font-size="11">• Parent: ⌊(i - 1) / 2⌋</text>
+          <text x="0" y="109" fill="#a7f3d0" font-family="JetBrains Mono" font-size="11">• Parent: floor((i - 1) / 2)</text>
         </g>
       </svg>
-      <div class="figure-caption">Figure 2: Binary Min-Heap Complete Tree and Memory Array Offset Formulation</div>
+      <div class="figure-caption">Figure 2: Complete Binary Min-Heap Tree and Underlying Array Index Mapping</div>
     </div>
 
     <div class="page-break"></div>
 
-    <!-- ========================================== -->
-    <!-- SECTION 9: FORMAL PSEUDOCODE               -->
-    <!-- ========================================== -->
+    <!-- SECTION 9 -->
     <h2>9.0 Formal Algorithm Specification & Pseudocode</h2>
+    <p>
+      Here is the formal pseudocode for our implementation, structured according to standard Cormen (CLRS) conventions:
+    </p>
 
-    <pre><code>/**
- * Formal Dijkstra Algorithm with Binary Min-Heap Priority Queue
- * Time Complexity: O((|V| + |E|) log |V|)
- * Space Complexity: O(|V| + |E|)
- */
-ALGORITHM Dijkstra(Graph G = (V, E), Source s ∈ V, Destination t ∈ V):
-    // Phase 1: Initialization
-    FOR each vertex v ∈ V DO:
-        dist[v] ← ∞
-        prev[v] ← NULL
-        visited[v] ← FALSE
-    END FOR
-    dist[s] ← 0
+    <pre><code>ALGORITHM Dijkstra(Graph G, Source s, Destination t):
+Input:  Graph G = (V, E) with non-negative edge weights w, source vertex s, destination t
+Output: Shortest distance dist[t] and reconstructed path array P
 
-    // Phase 2: Heap Instantiation
-    PQ ← MinBinaryHeap()
-    PQ.insert(item: s, priority: 0)
+1.  FOR each vertex v in G.V DO:
+2.      dist[v] &lt;- INFINITY
+3.      prev[v] &lt;- NULL
+4.      visited[v] &lt;- FALSE
+5.  END FOR
+6.  dist[s] &lt;- 0
+7.  
+8.  PQ &lt;- MinBinaryHeap()
+9.  PQ.insert(item: s, priority: 0)
+10. 
+11. WHILE NOT PQ.isEmpty() DO:
+12.     u_elem &lt;- PQ.extractMin()
+13.     u &lt;- u_elem.item
+14.     
+15.     IF visited[u] == TRUE THEN:
+16.         CONTINUE
+17.     END IF
+18.     visited[u] &lt;- TRUE
+19.     
+20.     IF u == t THEN:
+21.         BREAK  // Stop early once target is settled
+22.     END IF
+23.     
+24.     FOR each neighbor v in G.Adj[u] with weight w(u, v) DO:
+25.         IF visited[v] == FALSE THEN:
+26.             new_dist &lt;- dist[u] + w(u, v)
+27.             IF new_dist &lt; dist[v] THEN:          // Edge Relaxation
+28.                 dist[v] &lt;- new_dist
+29.                 prev[v] &lt;- u
+30.                 PQ.insert(item: v, priority: new_dist)
+31.             END IF
+32.         END IF
+33.     END FOR
+34. END WHILE
+35. 
+36. path &lt;- []
+37. curr &lt;- t
+38. IF dist[t] != INFINITY THEN:
+39.     WHILE curr != NULL DO:
+40.         path.prepend(curr)
+41.         curr &lt;- prev[curr]
+42.     END WHILE
+43. END IF
+44. 
+45. RETURN path, dist[t]</code></pre>
 
-    // Phase 3: Relaxation Loop
-    WHILE NOT PQ.isEmpty() DO:
-        u_elem ← PQ.extractMin()
-        u ← u_elem.item
-        dist_u ← u_elem.priority
-
-        IF visited[u] == TRUE THEN:
-            CONTINUE
-        END IF
-        visited[u] ← TRUE
-
-        // Early stopping target optimization
-        IF u == t THEN:
-            BREAK
-        END IF
-
-        FOR each outgoing edge (u, v) ∈ G.Adj[u] with weight w(u, v) DO:
-            IF visited[v] == FALSE THEN:
-                new_dist ← dist[u] + w(u, v)
-                IF new_dist < dist[v] THEN:
-                    dist[v] ← new_dist
-                    prev[v] ← u
-                    PQ.insert(item: v, priority: new_dist)
-                END IF
-            END IF
-        END FOR
-    END WHILE
-
-    // Phase 4: Path Reconstruction
-    path ← EmptyList()
-    curr ← t
-    IF dist[t] ≠ ∞ THEN:
-        WHILE curr ≠ NULL DO:
-            path.prepend(curr)
-            curr ← prev[curr]
-        END WHILE
-    END IF
-
-    RETURN (Path: path, TotalDistance: dist[t])</code></pre>
-
-    <!-- ========================================== -->
-    <!-- SECTION 10: SYSTEM ARCHITECTURE            -->
-    <!-- ========================================== -->
+    <!-- SECTION 10 -->
     <h2>10.0 System Architecture & Software Engineering Design</h2>
+    <p>
+      We designed the software using a clean three-layer architecture to keep the user interface decoupled from the algorithm engine:
+    </p>
 
     <div class="figure-container">
       <svg width="100%" height="240" viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg">
         <rect width="760" height="240" rx="10" fill="#0b1329"/>
         
-        <!-- Presentation Layer -->
         <rect x="30" y="25" width="210" height="190" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
         <text x="135" y="50" fill="#60a5fa" font-family="Plus Jakarta Sans" font-size="12" font-weight="800" text-anchor="middle">LAYER 1: PRESENTATION</text>
         <rect x="45" y="65" width="180" height="30" rx="6" fill="#0f172a"/><text x="135" y="84" fill="#cbd5e1" font-family="Plus Jakarta Sans" font-size="10.5" text-anchor="middle">Clean Campus Map Canvas</text>
         <rect x="45" y="105" width="180" height="30" rx="6" fill="#0f172a"/><text x="135" y="124" fill="#cbd5e1" font-family="Plus Jakarta Sans" font-size="10.5" text-anchor="middle">Route Selector & Stats Panel</text>
         <rect x="45" y="145" width="180" height="30" rx="6" fill="#0f172a"/><text x="135" y="164" fill="#cbd5e1" font-family="Plus Jakarta Sans" font-size="10.5" text-anchor="middle">Step-by-Step Simulator Dock</text>
 
-        <!-- Algorithm Engine Layer -->
         <rect x="275" y="25" width="210" height="190" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
         <text x="380" y="50" fill="#34d399" font-family="Plus Jakarta Sans" font-size="12" font-weight="800" text-anchor="middle">LAYER 2: DAA ENGINE</text>
         <rect x="290" y="65" width="180" height="30" rx="6" fill="#0f172a"/><text x="380" y="84" fill="#cbd5e1" font-family="Plus Jakarta Sans" font-size="10.5" text-anchor="middle">Dijkstra Shortest Path</text>
         <rect x="290" y="105" width="180" height="30" rx="6" fill="#0f172a"/><text x="380" y="124" fill="#cbd5e1" font-family="Plus Jakarta Sans" font-size="10.5" text-anchor="middle">Step State Recorder</text>
         <rect x="290" y="145" width="180" height="30" rx="6" fill="#0f172a"/><text x="380" y="164" fill="#cbd5e1" font-family="Plus Jakarta Sans" font-size="10.5" text-anchor="middle">BFS / A* / Bellman Benchmarks</text>
 
-        <!-- Data & Structures Layer -->
         <rect x="520" y="25" width="210" height="190" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
         <text x="625" y="50" fill="#fbbf24" font-family="Plus Jakarta Sans" font-size="12" font-weight="800" text-anchor="middle">LAYER 3: DATA STRUCTURES</text>
         <rect x="535" y="65" width="180" height="30" rx="6" fill="#0f172a"/><text x="625" y="84" fill="#cbd5e1" font-family="Plus Jakarta Sans" font-size="10.5" text-anchor="middle">Min-Binary Heap Queue</text>
         <rect x="535" y="105" width="180" height="30" rx="6" fill="#0f172a"/><text x="625" y="124" fill="#cbd5e1" font-family="Plus Jakarta Sans" font-size="10.5" text-anchor="middle">Graph Adjacency List</text>
         <rect x="535" y="145" width="180" height="30" rx="6" fill="#0f172a"/><text x="625" y="164" fill="#cbd5e1" font-family="Plus Jakarta Sans" font-size="10.5" text-anchor="middle">Distance & Prev Map</text>
 
-        <!-- Connectors -->
-        <path d="M 240 120 L 275 120" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
-        <path d="M 485 120 L 520 120" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+        <path d="M 240 120 L 275 120" stroke="#94a3b8" stroke-width="2"/>
+        <path d="M 485 120 L 520 120" stroke="#94a3b8" stroke-width="2"/>
       </svg>
       <div class="figure-caption">Figure 3: Layered Component Architecture of SmartCampus</div>
     </div>
 
     <div class="page-break"></div>
 
-    <!-- ========================================== -->
-    <!-- SECTION 11: IMPLEMENTATION DETAILS         -->
-    <!-- ========================================== -->
+    <!-- SECTION 11 -->
     <h2>11.0 Implementation Details & Code Modules</h2>
     <p>
-      SmartCampus is implemented using a modern TypeScript web stack (React 19 + Vite 8 + Tailwind CSS). The project codebase is organized into distinct, modular subsystems:
+      We built the application using React 19, TypeScript, and Vite. The codebase is organized cleanly into modular files:
     </p>
 
     <table>
       <thead>
         <tr>
-          <th>Module File</th>
-          <th>Lines of Code</th>
-          <th>Core Purpose</th>
+          <th>Source File</th>
+          <th>Lines</th>
+          <th>Primary Responsibilities</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td><code>priorityQueue.ts</code></td><td>125</td><td>Custom Binary Min-Heap with bubble-up, sink-down, and atomic op counters.</td></tr>
-        <tr><td><code>dijkstra.ts</code></td><td>240</td><td>Standard Dijkstra with microsecond profiling and step-by-step generator.</td></tr>
-        <tr><td><code>bfs.ts</code></td><td>95</td><td>Unweighted Breadth-First Search for hop-minimization benchmark.</td></tr>
-        <tr><td><code>astar.ts</code></td><td>120</td><td>A* algorithm with Euclidean distance directional heuristic.</td></tr>
-        <tr><td><code>bellmanFord.ts</code></td><td>85</td><td>\( \mathcal{O}(V \cdot E) \) Bellman-Ford algorithm for negative-weight detection.</td></tr>
-        <tr><td><code>testSuite.ts</code></td><td>110</td><td>Automated testing harness running boundary and assertion test cases.</td></tr>
-        <tr><td><code>CleanCampusMap.tsx</code></td><td>230</td><td>Clean SVG-based campus graph map renderer with animated edge paths.</td></tr>
-        <tr><td><code>CleanVisualizer.tsx</code></td><td>160</td><td>Step-by-step simulator player dock with synchronized table snapshots.</td></tr>
+        <tr><td><code>priorityQueue.ts</code></td><td>125</td><td>Min-Binary Heap with <code>insert</code>, <code>extractMin</code>, <code>bubbleUp</code>, and operation counters.</td></tr>
+        <tr><td><code>dijkstra.ts</code></td><td>240</td><td>Dijkstra execution engine, microsecond latency measurement, and step-by-step trace recorder.</td></tr>
+        <tr><td><code>bfs.ts</code></td><td>95</td><td>Unweighted Breadth-First Search implementation for edge-hop comparison.</td></tr>
+        <tr><td><code>astar.ts</code></td><td>120</td><td>A* algorithm with Euclidean distance heuristic function.</td></tr>
+        <tr><td><code>bellmanFord.ts</code></td><td>85</td><td>O(V * E) Bellman-Ford implementation for negative-weight benchmark comparisons.</td></tr>
+        <tr><td><code>testSuite.ts</code></td><td>110</td><td>Automated testing harness running assertions across test scenarios T1 through T7.</td></tr>
+        <tr><td><code>CleanCampusMap.tsx</code></td><td>230</td><td>Interactive SVG map rendering graph vertices, road labels, and glowing shortest path routes.</td></tr>
+        <tr><td><code>CleanVisualizer.tsx</code></td><td>160</td><td>Step-by-step simulator player dock with live distance table snapshots.</td></tr>
       </tbody>
     </table>
 
-    <!-- ========================================== -->
-    <!-- SECTION 12: STEP-BY-STEP WALKTHROUGH       -->
-    <!-- ========================================== -->
-    <h2>12.0 Step-by-Step Algorithmic Walkthrough & Trace Diagrams</h2>
+    <!-- SECTION 12 -->
+    <h2>12.0 Step-by-Step Algorithmic Trace & State Visualizer</h2>
     <p>
-      To illustrate the step-by-step mechanics of Dijkstra’s algorithm, consider finding the shortest route from <strong>Main Block</strong> to <strong>Computer Science Block</strong>.
+      Let us trace what happens when we calculate the shortest path from <strong>Main Block</strong> to <strong>Computer Science Block</strong>:
     </p>
 
     <div class="figure-container">
       <svg width="100%" height="280" viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg">
         <rect width="760" height="280" rx="10" fill="#0b1329"/>
         
-        <!-- Step 1 Box -->
         <rect x="25" y="20" width="220" height="240" rx="8" fill="#1e293b" stroke="#475569"/>
         <text x="135" y="44" fill="#a7f3d0" font-family="Plus Jakarta Sans" font-size="12" font-weight="700" text-anchor="middle">STEP 1: Extract Main (0m)</text>
         <text x="35" y="70" fill="#cbd5e1" font-family="JetBrains Mono" font-size="10.5">Current: Main Block (0m)</text>
@@ -816,7 +795,6 @@ ALGORITHM Dijkstra(Graph G = (V, E), Source s ∈ V, Destination t ∈ V):
         <text x="45" y="206" fill="#fde68a" font-family="JetBrains Mono" font-size="9.5">     (CS, 340)]</text>
         <text x="45" y="226" fill="#34d399" font-family="JetBrains Mono" font-size="9.5">Settled: {Main}</text>
 
-        <!-- Step 2 Box -->
         <rect x="270" y="20" width="220" height="240" rx="8" fill="#1e293b" stroke="#10b981"/>
         <text x="380" y="44" fill="#a7f3d0" font-family="Plus Jakarta Sans" font-size="12" font-weight="700" text-anchor="middle">STEP 2: Extract Library (120m)</text>
         <text x="280" y="70" fill="#cbd5e1" font-family="JetBrains Mono" font-size="10.5">Current: Library (120m)</text>
@@ -829,7 +807,6 @@ ALGORITHM Dijkstra(Graph G = (V, E), Source s ∈ V, Destination t ∈ V):
         <text x="290" y="206" fill="#fde68a" font-family="JetBrains Mono" font-size="9.5">     (Sci, 440)]</text>
         <text x="290" y="226" fill="#34d399" font-family="JetBrains Mono" font-size="9.5">Settled: {Main, Lib}</text>
 
-        <!-- Step 3 Box -->
         <rect x="515" y="20" width="220" height="240" rx="8" fill="#1e293b" stroke="#06b6d4"/>
         <text x="625" y="44" fill="#67e8f9" font-family="Plus Jakarta Sans" font-size="12" font-weight="700" text-anchor="middle">STEP 3: Extract Cafeteria (200m)</text>
         <text x="525" y="70" fill="#cbd5e1" font-family="JetBrains Mono" font-size="10.5">Current: Cafeteria (200m)</text>
@@ -842,38 +819,36 @@ ALGORITHM Dijkstra(Graph G = (V, E), Source s ∈ V, Destination t ∈ V):
         <text x="535" y="206" fill="#fde68a" font-family="JetBrains Mono" font-size="9.5">     (Sci, 440)]</text>
         <text x="535" y="226" fill="#34d399" font-family="JetBrains Mono" font-size="9.5">Settled: {Main, Lib, Caf}</text>
       </svg>
-      <div class="figure-caption">Figure 4: Discrete Algorithmic Step-by-Step State Evolution & Priority Queue Mutations</div>
+      <div class="figure-caption">Figure 4: Discrete Step-by-Step State Evolution and Queue Contents</div>
     </div>
 
     <div class="page-break"></div>
 
-    <!-- ========================================== -->
-    <!-- SECTION 13: TEST CASES                     -->
-    <!-- ========================================== -->
+    <!-- SECTION 13 -->
     <h2>13.0 Test Cases & Assertions Matrix</h2>
     <p>
-      To ensure algorithmic correctness and robust edge-case handling during viva demonstration, 7 distinct test scenarios were designed and verified:
+      We wrote an automated test suite covering 7 specific scenarios to verify edge cases:
     </p>
 
     <table>
       <thead>
         <tr>
           <th>Test ID</th>
-          <th>Test Scenario Name</th>
-          <th>Source ($s$)</th>
-          <th>Target ($t$)</th>
+          <th>Scenario</th>
+          <th>From</th>
+          <th>To</th>
           <th>Expected Distance</th>
-          <th>Actual Output</th>
-          <th>Execution Latency</th>
+          <th>Actual Result</th>
+          <th>Latency</th>
           <th>Verdict</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td><strong>T1</strong></td>
-          <td>Direct Adjacent Edge</td>
+          <td>Direct Edge Adjacent Path</td>
           <td>Main Block</td>
-          <td>Knowledge Library</td>
+          <td>Library</td>
           <td>120 m</td>
           <td>120 m</td>
           <td>0.08 ms</td>
@@ -881,9 +856,9 @@ ALGORITHM Dijkstra(Graph G = (V, E), Source s ∈ V, Destination t ∈ V):
         </tr>
         <tr>
           <td><strong>T2</strong></td>
-          <td>Multi-Hop Academic Corridor</td>
-          <td>Knowledge Library</td>
-          <td>CS & AI Block</td>
+          <td>Multi-Hop Intermediate Path</td>
+          <td>Library</td>
+          <td>CS Block</td>
           <td>180 m</td>
           <td>180 m</td>
           <td>0.09 ms</td>
@@ -891,7 +866,7 @@ ALGORITHM Dijkstra(Graph G = (V, E), Source s ∈ V, Destination t ∈ V):
         </tr>
         <tr>
           <td><strong>T3</strong></td>
-          <td>West Quad Diagonal Edge</td>
+          <td>Reverse / Bidirectional Edge</td>
           <td>Main Block</td>
           <td>Auditorium</td>
           <td>160 m</td>
@@ -901,7 +876,7 @@ ALGORITHM Dijkstra(Graph G = (V, E), Source s ∈ V, Destination t ∈ V):
         </tr>
         <tr>
           <td><strong>T4</strong></td>
-          <td>Self-Loop (Same Vertex)</td>
+          <td>Self-Loop (Same Location)</td>
           <td>Main Block</td>
           <td>Main Block</td>
           <td>0 m</td>
@@ -913,7 +888,7 @@ ALGORITHM Dijkstra(Graph G = (V, E), Source s ∈ V, Destination t ∈ V):
           <td><strong>T5</strong></td>
           <td>Multi-Path Tie Resolution</td>
           <td>Main Block</td>
-          <td>CS & AI Block</td>
+          <td>CS Block</td>
           <td>300 m</td>
           <td>300 m</td>
           <td>0.12 ms</td>
@@ -921,9 +896,9 @@ ALGORITHM Dijkstra(Graph G = (V, E), Source s ∈ V, Destination t ∈ V):
         </tr>
         <tr>
           <td><strong>T6</strong></td>
-          <td>Disconnected Subgraph Test</td>
+          <td>Disconnected Island Vertex</td>
           <td>Main Block</td>
-          <td>Isolated Station</td>
+          <td>Isolated Annex</td>
           <td>UNREACHABLE</td>
           <td>UNREACHABLE</td>
           <td>0.06 ms</td>
@@ -931,7 +906,7 @@ ALGORITHM Dijkstra(Graph G = (V, E), Source s ∈ V, Destination t ∈ V):
         </tr>
         <tr>
           <td><strong>T7</strong></td>
-          <td>Diagonal Cross-Campus Route</td>
+          <td>Cross-Campus Diagonal Route</td>
           <td>Health Center</td>
           <td>Hostel Block</td>
           <td>650 m</td>
@@ -942,130 +917,123 @@ ALGORITHM Dijkstra(Graph G = (V, E), Source s ∈ V, Destination t ∈ V):
       </tbody>
     </table>
 
-    <!-- ========================================== -->
-    <!-- SECTION 14: ASYMPTOTIC COMPLEXITY          -->
-    <!-- ========================================== -->
+    <!-- SECTION 14 -->
     <h2>14.0 Rigorous Asymptotic Complexity Analysis</h2>
 
-    <h3>14.1 Time Complexity Derivation</h3>
+    <h3>14.1 Time Complexity</h3>
     <p>
-      The execution time of Dijkstra’s algorithm depends directly on the implementations of the vertex set and the Priority Queue:
+      Let <code>V</code> be the number of campus buildings (vertices) and <code>E</code> be the number of walkable paths (edges).
     </p>
-    <ol>
-      <li><strong>Initialization Phase:</strong> Setting \( \text{dist}[v] = \infty \) and \( \text{prev}[v] = \text{null} \) for all \( v \in V \) requires \( \mathcal{O}(V) \) operations.</li>
-      <li><strong>Extract-Min Operations:</strong> Each vertex \( u \) is extracted from the binary min-heap at most once. For a binary heap with \( |V| \) elements, one <code>extractMin()</code> call takes \( \mathcal{O}(\log V) \) time via the sink-down procedure. Across all \( |V| \) vertices:
-      $$\text{Total Extract-Min Time} = |V| \times \mathcal{O}(\log V) = \mathcal{O}(V \log V)$$
-      </li>
-      <li><strong>Edge Relaxation & Decrease-Key Operations:</strong> In an adjacency list representation, each edge \( (u, v) \in E \) is traversed at most twice (once from each endpoint in undirected graphs). Whenever an edge relaxation condition succeeds, inserting or updating the priority in the binary heap takes \( \mathcal{O}(\log V) \) via the bubble-up procedure. Across all \( |E| \) edges:
-      $$\text{Total Relaxation Time} = |E| \times \mathcal{O}(\log V) = \mathcal{O}(E \log V)$$
-      </li>
-    </ol>
-
-    <div class="math-block">
-      \text{Total Asymptotic Time Complexity} = \mathcal{O}((V + E) \log V)
-    </div>
-
-    <h3>14.2 Space Complexity Derivation</h3>
     <ul>
-      <li><strong>Adjacency List Graph:</strong> Requires an array of \( |V| \) heads and a total of \( 2|E| \) edge list nodes \( \implies \mathcal{O}(V + E) \).</li>
-      <li><strong>Auxiliary Distance Array:</strong> \( \text{dist}[] \) stores \( |V| \) floats \( \implies \mathcal{O}(V) \).</li>
-      <li><strong>Predecessor Array:</strong> \( \text{prev}[] \) stores \( |V| \) pointers \( \implies \mathcal{O}(V) \).</li>
-      <li><strong>Binary Min-Heap:</strong> Stores at most \( |V| \) elements at any instance \( \implies \mathcal{O}(V) \).</li>
+      <li><strong>Initialization</strong>: Setting initial distance values to infinity and clearing previous pointers takes <code>O(V)</code> time.</li>
+      <li><strong>Extract-Min</strong>: Each node is extracted from the binary min-heap at most once. For <code>V</code> vertices, performing <code>extractMin()</code> takes <code>V * O(log V) = O(V log V)</code>.</li>
+      <li><strong>Edge Relaxation</strong>: In an undirected graph, each edge <code>(u, v)</code> is checked twice. When a shorter distance is found, updating the heap takes <code>O(log V)</code>. Across all <code>E</code> edges, this takes <code>E * O(log V) = O(E log V)</code>.</li>
     </ul>
 
     <div class="math-block">
-      \text{Total Space Complexity} = \mathcal{O}(V + E)
+      Total Time Complexity = O((V + E) log V)
+    </div>
+
+    <h3>14.2 Space Complexity</h3>
+    <ul>
+      <li><strong>Adjacency List</strong>: Stores <code>|V|</code> vertices and <code>2|E|</code> directed edge records = <code>O(V + E)</code>.</li>
+      <li><strong>Auxiliary Arrays</strong>: The <code>dist[]</code> array, <code>prev[]</code> pointers, and min-heap take <code>O(V)</code> space.</li>
+    </ul>
+
+    <div class="math-block">
+      Total Space Complexity = O(V + E)
     </div>
 
     <div class="page-break"></div>
 
-    <!-- ========================================== -->
-    <!-- SECTION 15: COMPARATIVE BENCHMARKS         -->
-    <!-- ========================================== -->
+    <!-- SECTION 15 -->
     <h2>15.0 Comparative Algorithmic Benchmarks</h2>
     <p>
-      A key contribution of SmartCampus is the empirical comparison of four distinct graph search algorithms evaluated on the identical campus network:
+      We ran all four algorithms on the exact same query: <strong>Main Block to Computer Science Block</strong>:
     </p>
 
     <table>
       <thead>
         <tr>
           <th>Algorithm</th>
-          <th>Graph Applicability</th>
-          <th>Distance Found (Main ➜ CS)</th>
+          <th>Graph Type Supported</th>
+          <th>Distance Found</th>
+          <th>Hops</th>
           <th>Nodes Visited</th>
           <th>Time Complexity</th>
-          <th>Weighted Shortest Path Optimal?</th>
+          <th>Finds Shortest Distance?</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Dijkstra’s Algorithm</strong></td>
-          <td>Weighted (\( w \ge 0 \))</td>
-          <td><strong>300 m (2 hops)</strong></td>
+          <td><strong>Dijkstra's Algorithm</strong></td>
+          <td>Weighted (non-negative)</td>
+          <td><strong>300 m</strong></td>
+          <td>2</td>
           <td>7</td>
-          <td>\( \mathcal{O}((V + E) \log V) \)</td>
-          <td><span class="badge-pass">YES — Strictly Optimal</span></td>
+          <td>O((V + E) log V)</td>
+          <td><span class="badge-pass">YES (Optimal)</span></td>
         </tr>
         <tr>
-          <td><strong>A* Search (Euclidean)</strong></td>
+          <td><strong>A* Search</strong></td>
           <td>Weighted + Spatial Heuristic</td>
-          <td><strong>300 m (2 hops)</strong></td>
+          <td><strong>300 m</strong></td>
+          <td>2</td>
           <td>5</td>
-          <td>\( \mathcal{O}(E) \)</td>
-          <td><span class="badge-pass">YES — Optimal & Faster</span></td>
+          <td>O(E)</td>
+          <td><span class="badge-pass">YES (Optimal)</span></td>
         </tr>
         <tr>
           <td><strong>Breadth-First Search (BFS)</strong></td>
-          <td>Unweighted Graphs Only</td>
-          <td><strong>340 m (1 hop)</strong></td>
+          <td>Unweighted only</td>
+          <td><strong>340 m</strong></td>
+          <td>1</td>
           <td>6</td>
-          <td>\( \mathcal{O}(V + E) \)</td>
-          <td><span style="background:#fee2e2; color:#b91c1c; padding:3px 8px; border-radius:6px; font-weight:700; font-size:10.5px;">NO — Suboptimal (+40m)</span></td>
+          <td>O(V + E)</td>
+          <td><span style="background:#fee2e2; color:#b91c1c; padding:3px 8px; border-radius:6px; font-weight:700; font-size:10.5px;">NO (Suboptimal +40m)</span></td>
         </tr>
         <tr>
-          <td><strong>Bellman-Ford Algorithm</strong></td>
-          <td>Weighted (Arbitrary / Negative)</td>
-          <td><strong>300 m (2 hops)</strong></td>
+          <td><strong>Bellman-Ford</strong></td>
+          <td>Weighted (with negative weights)</td>
+          <td><strong>300 m</strong></td>
+          <td>2</td>
           <td>12</td>
-          <td>\( \mathcal{O}(V \cdot E) \)</td>
-          <td><span class="badge-pass">YES — Slow \( \mathcal{O}(VE) \)</span></td>
+          <td>O(V * E)</td>
+          <td><span class="badge-pass">YES (Slower)</span></td>
         </tr>
       </tbody>
     </table>
 
     <div class="callout callout-warn">
-      <strong>Core Analytical Finding for Viva Presentation:</strong><br/>
-      BFS minimizes the <em>number of edges (hops)</em> without considering physical meter distances. When querying <code>Main Block ➜ CS Block</code>, BFS chooses the direct 1-hop walkway of <strong>340m</strong>. In contrast, <strong>Dijkstra's Algorithm</strong> correctly evaluates that taking the 2-hop route via Knowledge Library (120m + 180m = <strong>300m</strong>) is 40 meters shorter. This demonstrates why Dijkstra’s Algorithm is mathematically required for physical road networks.
+      <strong>Key Viva Discussion Point:</strong><br/>
+      BFS only minimizes the number of edges (hops). For <code>Main Block -&gt; CS Block</code>, BFS picks the single direct walkway of <strong>340m</strong>. In contrast, <strong>Dijkstra's Algorithm</strong> evaluates the true physical meter weights and selects the 2-hop path via the Library (120m + 180m = <strong>300m</strong>), saving 40 meters of walking.
     </div>
 
-    <!-- ========================================== -->
-    <!-- SECTION 16: CONCLUSION & FUTURE SCOPE      -->
-    <!-- ========================================== -->
+    <!-- SECTION 16 -->
     <h2>16.0 Limitations, Future Scope & Academic Conclusion</h2>
 
-    <h3>16.1 Current System Limitations</h3>
+    <h3>16.1 Limitations</h3>
     <ul>
-      <li><strong>Static Edge Weights</strong>: Edge weights represent static physical distance measurements and do not yet integrate dynamic real-time pedestrian rush-hour congestion penalties.</li>
-      <li><strong>Two-Dimensional Plane</strong>: The current campus model abstracts navigation in 2D ground coordinates without modeling multi-floor elevator/stair transitions inside vertical buildings.</li>
+      <li><strong>Static Walking Distances</strong>: Edge weights currently assume clear pathways and do not dynamically adjust for sudden crowds during festival events.</li>
+      <li><strong>2D Ground Coordinates</strong>: Multi-floor elevator and stair connections within buildings are modeled at building entrances rather than full 3D indoor levels.</li>
     </ul>
 
-    <h3>16.2 Future Scope & Extensions</h3>
+    <h3>16.2 Future Enhancements</h3>
     <ul>
-      <li><strong>Real GPS / Beacon Integration</strong>: Live blue-dot indoor positioning via Bluetooth Low Energy (BLE) beacons.</li>
-      <li><strong>Accessibility-First Routing Mode</strong>: Automatic path filtering ensuring wheelchair ramp and elevator-only navigation routes.</li>
-      <li><strong>Multi-Stop Travelling Salesperson (TSP) Routing</strong>: Finding the shortest tour through multiple departmental waypoints in a single student trip.</li>
+      <li><strong>Indoor Beacon Positioning</strong>: Integrating Bluetooth Low Energy (BLE) sensors for real-time blue-dot tracking inside multi-floor blocks.</li>
+      <li><strong>Accessible Routing</strong>: Adding a toggle to exclude stairways and prioritize step-free ramp paths for wheelchair users.</li>
+      <li><strong>Multi-Stop Itineraries</strong>: Finding the shortest tour through several buildings in a single trip.</li>
     </ul>
 
-    <h3>16.3 Academic Conclusion</h3>
+    <h3>16.3 Conclusion</h3>
     <p>
-      The <strong>SmartCampus</strong> project demonstrates a complete, rigorous realization of graph theory and greedy algorithmic optimization. By coupling Dijkstra’s Algorithm with an efficient Binary Min-Heap Priority Queue, the system achieves provably optimal physical routing with \( \mathcal{O}((V + E) \log V) \) performance. The integrated step visualizer and comparative benchmark matrix make the underlying data structure mutations clear and accessible for academic DAA evaluation.
+      In this project, we successfully applied graph theory and Dijkstra's shortest path algorithm to solve a real-world campus navigation problem. Using a binary min-heap priority queue allowed us to achieve guaranteed O((V + E) log V) performance. The integrated visualizer and benchmark tests demonstrate the algorithm's correctness, efficiency, and real-world advantages.
     </p>
 
     <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #cbd5e1; display: flex; justify-content: space-between; font-size: 12px; color: #64748b;">
       <div>
         <strong>Prepared by:</strong> DAA Student Group<br/>
-        <strong>Department:</strong> Computer Science & Engineering
+        <strong>Department:</strong> Computer Science &amp; Engineering
       </div>
       <div style="text-align: right;">
         <strong>Evaluated by:</strong> Course Faculty Coordinator<br/>
